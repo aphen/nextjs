@@ -10,10 +10,9 @@ export function deleteVideo(id: string | number): Promise<void> {
     return $axios.delete('/videos', { params: { id } });
 }
 interface Video {
-    _id: string | number;
+    // _id: string | number;
     id: string;
     name: string;
-    key: number;
     age: number;
     address: string;
 }
