@@ -3,6 +3,7 @@
 import './globals.css';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { useEffect, useRef } from "react";
+import StyledComponentsRegistry from '../lib/AntdRegistry';
 
 export const metadata = {
   title: 'Next.js',
@@ -36,8 +37,10 @@ export default function RootLayout({
   }, []);
   
   return (
-    <html lang="en">
-      <body suppressHydrationWarning={true}>{children}</body>
+    <html>
+      <body suppressHydrationWarning={true}>
+        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+      </body>
     </html>
   )
 }

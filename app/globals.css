@@ -2,7 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+ :root {
+  height: 100%;
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -14,9 +15,10 @@
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-}
+} 
 
 body {
+  height: 100%;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -26,6 +28,11 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-body > section {
-  height: 100vh;
+body>section{
+  height: 100%;
 }
+
+.ant-layout-sider-children{
+  height: 100vh!important;
+}
+
